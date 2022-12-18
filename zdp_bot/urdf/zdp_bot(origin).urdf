@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="zdp_bot">
+  <link name="base_footprint">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.001 0.001 0.001" />
+                </geometry>
+            </visual>
+  </link>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00037294 -1.0061E-16 0.0016162"
+        rpy="0 0 0" />
+      <mass
+        value="5.2315" />
+      <inertia
+        ixx="0.055139"
+        ixy="1.6596E-17"
+        ixz="-1.3762E-19"
+        iyy="0.086484"
+        iyz="4.8736E-18"
+        izz="0.13834" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zdp_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zdp_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Laser_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.075398" />
+      <inertia
+        ixx="3.0159E-05"
+        ixy="-8.0733E-22"
+        ixz="8.4703E-22"
+        iyy="3.0159E-05"
+        iyz="-1.2705E-21"
+        izz="1.508E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zdp_bot/meshes/Laser_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zdp_bot/meshes/Laser_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_footprint_joint" type="fixed">
+            <origin xyz="0 0 0.07" rpy="0 0 0" />        
+            <parent link="base_footprint"/>
+            <child link="base_link" />
+  </joint>
+  
+  <joint
+    name="laser"
+    type="fixed">
+    <origin
+      xyz="0.411331577755572 -0.00381190016736267 0.04"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Laser_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

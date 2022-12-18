@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/liur/Desktop/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/liur/Desktop/catkin_ws/src/ar_track_alvar-noetic-devel/ar_track_alvar/include/**",
+        "/home/liur/Desktop/catkin_ws/src/auto_dock_msg/include/**",
+        "/home/liur/Desktop/catkin_ws/src/hand_model/include/**",
+        "/home/liur/Desktop/catkin_ws/src/hps_camera/include/**",
+        "/home/liur/Desktop/catkin_ws/src/motor_drive/include/**",
+        "/home/liur/Desktop/catkin_ws/src/robot_mrobot/mrobot_bringup/include/**",
+        "/home/liur/Desktop/catkin_ws/src/nav_goal_set/include/**",
+        "/home/liur/Desktop/catkin_ws/src/sick_scan/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
