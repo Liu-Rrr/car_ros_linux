@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="hand_model" type="main_control.py" name="main_control" output="screen"></node>
+    <node pkg="hand_model" type="send_nav_goal.py" name="send_nav_goal" output="screen"></node>
+    <!-- <node pkg="hand_model" type="stop_move.py" name="stop_move" output="screen"></node> -->
+    <node pkg="hand_model" type="stop_nav_goal.py" name="stop_nav_goal" output="screen"></node>
+    <!-- <node pkg="hand_model" type="setInitPose.py" name="setInitPose" output="screen"></node> -->
+</launch>

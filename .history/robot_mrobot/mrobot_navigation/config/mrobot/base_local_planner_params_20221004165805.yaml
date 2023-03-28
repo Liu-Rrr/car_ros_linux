@@ -1,0 +1,40 @@
+controller_frequency: 3.0 #控制器的频率
+recovery_behavior_enabled: false
+clearing_rotation_allowed: false
+
+TrajectoryPlannerROS:
+   max_vel_x: 0.35 #x方向最大速度的绝对值
+   min_vel_x: 0.05
+   max_vel_y: 0.0  # zero for a differential drive robot
+   min_vel_y: 0.0 
+   min_in_place_vel_theta: 0.4 #原地旋转时，基座允许的最小焦速度
+   max_vel_theta: 0.2 #基座允许的最大角速度
+   escape_vel: -0.1  #表示机器人的逃离速度，即反向行走速度
+   acc_lim_x: 0.2 #x方向的加速度绝对值
+   acc_lim_y: 0.0 # zero for a differential drive robot
+   acc_lim_theta: 1.0 #旋转加速度的绝对值 初始1.2
+
+   holonomic_robot: false
+   yaw_goal_tolerance: 0.1 # about 6 degrees
+   xy_goal_tolerance: 0.1  # 10 cm 到达目标时，控制器在x y的位置误差
+   latch_xy_goal_tolerance: false
+   pdist_scale: 0.8    #控制器距离给定的路径有多近的加权值
+   gdist_scale: 0.4    #控制器试图达到局部目标，或者是控制速度的加权值
+   meter_scoring: true
+
+   heading_lookahead: 0.325 #在原地旋转轨迹得分不同时，单位米中向前走多远
+   heading_scoring: false  
+   heading_scoring_timestep: 0.8
+   occdist_scale: 0.01  #控制器避障的好坏加权值
+   oscillation_reset_dist: 0.05
+   publish_cost_grid_pc: false
+   prune_plan: true
+
+   sim_time: 3.0 #轨迹模拟时间
+   sim_granularity: 0.025  #步长，轨迹上采样点之间的距离
+   angular_sim_granularity: 0.025
+   vx_samples: 5  #x方向速度空间的采样点数
+   vy_samples: 0 # zero for a differential drive robot
+   vtheta_samples: 20
+   dwa: true   #是否采用DWA模式
+   simple_attractor: false

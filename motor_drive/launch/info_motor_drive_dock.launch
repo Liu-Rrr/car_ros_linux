@@ -25,6 +25,6 @@
     <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" />
     <include file="$(find ar_track_alvar)/launch/pr2_indiv_liur.launch" />
     <include file="$(find mrobot_navigation)/launch/nav_demo.launch" />
-    <include file="$(find hand_model)/launch/main_control.launch" />
+    <!-- <include file="$(find hand_model)/launch/main_control.launch" /> -->
 
 </launch>                                                                                         
